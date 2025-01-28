@@ -1,4 +1,4 @@
-body {margin: 5%;}
+body {margin: 2%;}
 h2 {margin: .5rem 0;}
 .flex {
 
@@ -15,12 +15,17 @@ h2 {margin: .5rem 0;}
         
     flex-direction: column;
     
-    margin: 0 2rem;
+    margin: 0 1rem;
     
     width: 20%;
         
     }
- #draw {
+.hidden{display:none}
+#answer{
+    width: 8rem;
+    height: 2.5rem;
+}
+.option{
 
     border: solid 2px #000;
             
@@ -31,9 +36,10 @@ h2 {margin: .5rem 0;}
         text-align: center;
             
         cursor: pointer;
+        align-self: center;
            
     }
-#draw {
+.option{
         position: relative;
         background-color: #04AA6D;
         border: none;
@@ -41,14 +47,14 @@ h2 {margin: .5rem 0;}
         color: #FFFFFF;
         width: 8rem;
         text-align: center;
-        -webkit-transition-duration: 0.4s; /* Safari */
+        -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         text-decoration: none;
         overflow: hidden;
         cursor: pointer;
       }
       
-#draw:after {
+.option:after{
         content: "";
         background: #90EE90;
         display: block;
@@ -59,19 +65,39 @@ h2 {margin: .5rem 0;}
         transition: all 0.8s
       }
       
-#draw:active:after {
+.option:active:after{
         padding: 0;
         margin: 0;
         opacity: 1;
         transition: 0s
-      }
+}
+.button {
+
+    background-color: #4CAF50;                     
+        
+    padding: .2rem;
+        
+    margin: 1rem;
+        
+    font-size: 1.3rem;
+        
+    color: #fff;
+        
+    }
+.button:hover {
+
+    color: red;
+        
+    cursor: pointer;
+        
+    }
 .number {font-size: 3rem;}
 
 .suit {width: 100%;}
 
 .suit img {
 
-    padding:.3rem;
+    padding:.1rem;
     
     width: 15%;
     
@@ -105,3 +131,22 @@ h2 {margin: .5rem 0;}
         
     }
 }
+.winner {
+    margin-top:10%;
+    align-content: center;
+    }
+span {
+
+    margin-left: 1rem;
+        
+    }
+input {
+
+    margin: 1rem 0;
+        
+    }
+p {
+    max-width: 6rem;
+    font-size: 1rem;
+    align-self: center;
+    }

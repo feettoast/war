@@ -7,31 +7,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div id="practice" style="font-size:2rem;"></div>
+        <div class="hidden" id="practice" style="font-size:2rem;"></div>
         <div id="gameboard" class="flex">
-            <div class="flexColumn">
+            <div class="flexColumn" id="sidePanel">
                 <h1 id="title">War</h1>
-                <h2 id="winner">Winner</h2>
-                <h2 id="p1CountDsp">First Player has <span id="player1Count"></span> cards.</h2>
-                <h2 id="p2CountDsp">Second Player has <span id="player2Count"></span> cards.</h2>
+                <h2 id="winner"></h2>
+                <h2 id="p1CountDsp">Player has <span id="player1Count"></span> cards.</h2>
+                <h2 id="p2CountDsp">Computer has <span id="player2Count"></span> cards.</h2>
+                <h1 id="settings" class="button">Math</h1>
+                <span id="mathOptions" class="hidden">
+                    <h1 id="arithmetic"class="button">Arithmetic</h1>
+                    <h1 id="compare" class="button">Compare</h1>
+                </span>
+                <span id="intOptions" class="hidden">
+                    <h1 id="intQuest">Use Integers?</h1>
+                    <h1 id="yInt" class="button">Yes</h1>
+                    <h1 id="nInt" class="button">No</h1>
+                </span>
+                <span id="arithOptions" class="hidden">
+                    <h1 id="add" class="button aOp">+</h1>
+                    <h1 id="subtract" class="button aOp">-</h1>
+                    <h1 id="multiply" class="button aOp">x</h1>
+                </span>
+                <input value="answer" id="answer" class="hidden"></input>
             </div>
             <div class="flex">
                 <div id="firstPlayer"class="flexColumn player">
-                    <h1 class="PLable">First Player</h1>
+                    <h1 id="PLable1"class="PLable">Player</h1>
                     <div id="firstPlayerNumber" class="number">
                     </div>
                     <div id="firstPlayerSuit" class="suit">
                     </div>
+                    <div id="firstPlayerWin" class="winner button hidden">Winner</div>
                 </div>
             </div>
-            <h1 id="draw">Draw</h1>
+           <p id="compareDirections" class="hidden">Click on the player that has the highest number</p>
+                <h1 id="draw" class="option hidden">Draw</h1>
+                <input  id="playerAnswer">
+                <button id="submit" class="hidden">Check</button>
+            </div>  
             <div>
                 <div id="secondPlayer" class="flexColumn player">
-                    <h1 class="PLable">Second Player</h1>
+                    <h1 id="PLable2" class="PLable">Computer</h1>
                     <div id="secondPlayerNumber" class="number">
                     </div>
                     <div id="secondPlayerSuit" class="suit">
                     </div>
+                    <div id="secondPlayerWin" class="winner button hidden">Winner</div>
                 </div>
             </div>
         </div>
